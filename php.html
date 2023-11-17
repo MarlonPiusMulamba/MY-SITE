@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+   
+
+<body>
+    <div id="counter" class="container text-primary my-3 h1"><B><h1>0</h1></B></div>
+
+    <script>
+        const targetNumber = 500;
+        const duration = 5 * 500; 
+        const interval = 5; 
+
+        const counterElement = document.getElementById("counter");
+        let currentNumber = 0;
+        const increment = Math.ceil(targetNumber / (duration / interval));
+
+        function updateCounter() {
+            if (currentNumber < targetNumber) {
+                currentNumber += increment;
+                if (currentNumber > targetNumber) {
+                    currentNumber = targetNumber;
+                }
+                counterElement.textContent = currentNumber;
+                setTimeout(updateCounter, interval);
+            }
+        }
+
+        setTimeout(updateCounter, interval);
+    </script>
+</body>
+</html>
+
+      
+</body>
+</html>
